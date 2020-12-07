@@ -1,5 +1,13 @@
-const palindromes = function() {
+const palindromes = function (word) {
+	word = word.toLowerCase();
+	word = word.replaceAll(' ', '');
+	word = word.replaceAll(',', '');
+	word = word.replaceAll('!', '');
+	word = word.replaceAll('.', '');
 
-}
+	let reversedWord = [...word].reverse().join('');
 
-module.exports = palindromes
+	return reversedWord === word;
+};
+
+module.exports = palindromes;
